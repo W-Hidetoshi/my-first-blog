@@ -1,7 +1,10 @@
+#cording:utf-8
 from django.shortcuts import render,get_object_or_404,redirect
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
+#↑　from .form import PostFormはカレントディレクトリ内にあるform.pyからimportするという意味
+#ここで、"."は"/"の意味。
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
