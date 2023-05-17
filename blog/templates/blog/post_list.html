@@ -10,5 +10,10 @@
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.text | linebreaksbr }}</p>
             </div>
-        {% endfor %}
+            <a href="{% url 'post_detail' pk=post.pk %}">
+                Comments:{{ post.approved_comments.count }}
+            </a>
+            <!--<a href="<div data-gb-custom-block data-tag="url" data-0='post_detail'></div>
+            ">Comments: {{ post.comments.count }}</a>-->
+            {% endfor %}
     {% endblock %}

@@ -8,6 +8,7 @@
     {% endif %}
 
     <form method="post" action="{% url 'login' %}">
+    <!--CSRFでのなりすまし防止のためにトークンを入れる -->
     {% csrf_token %}
         <table>
             <tr>
