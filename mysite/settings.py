@@ -1,3 +1,4 @@
+# coding:utf-8
 """
 Django settings for mysite project.
 
@@ -129,3 +130,5 @@ STATIC_ROOT = BASE_DIR / 'static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# ログイン成功時のリダイレクト先
+LOGIN_REDIRECT_URL = '/'
